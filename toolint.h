@@ -5,7 +5,7 @@ volatile boolean gf_no_int;
 volatile unsigned long ContactTime;  // Timer to avoid conatct bounce in interrupt routine
 
 
-void int_rain_cnt(void) {
+void ICACHE_RAM_ATTR int_rain_cnt(void) {
 
   if ((millis() - ContactTime) > 15 ) {  // debounce of REED contact. With 15ms speed more than 150 km/h can be measured
     ContactTime = millis();

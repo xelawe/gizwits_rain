@@ -74,7 +74,7 @@ void get_rain() {
   gf_no_int = false;
 
   float lv_rain_val = lv_rain_cnt;
-  lv_rain_val = lv_rain_val * 0.632;
+  lv_rain_val = lv_rain_val * 0.2; // 0.632;
   DebugPrintln(lv_rain_val);
 
   send_val(8, lv_rain_val);
