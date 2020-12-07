@@ -74,6 +74,9 @@ void get_rain() {
   gf_no_int = false;
 
   float lv_rain_val = lv_rain_cnt;
+
+  // 0.2mm oder 0,1" je Impuls - je nach Gewicht im Davis Regensensor 
+  // https://www.davisinstruments.com/product_documents/weather/manuals/07395-275_IM_07852.pdf
   lv_rain_val = lv_rain_val * 0.2; // 0.632;
   DebugPrintln(lv_rain_val);
 
