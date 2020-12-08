@@ -8,7 +8,7 @@ volatile unsigned long ContactTime;  // Timer to avoid conatct bounce in interru
 void ICACHE_RAM_ATTR int_rain_cnt(void) {
 
 // debounce of REED contact // war 15
-// gemessen: max 32 Impulse pro 10 Sekunden -> ~312ms zwischen den Impulsen
+// gemessen bei Davis Rain Collector II: max 32 Impulse pro 10 Sekunden -> ~312ms zwischen den Impulsen
   if ((millis() - ContactTime) > 100 ) {  
     ContactTime = millis();
 
