@@ -7,7 +7,9 @@ volatile unsigned long ContactTime;  // Timer to avoid conatct bounce in interru
 
 void ICACHE_RAM_ATTR int_rain_cnt(void) {
 
-  if ((millis() - ContactTime) > 100 ) {  // debounce of REED contact // war 15
+// debounce of REED contact // war 15
+// gemessen: max 32 Impulse pro 10 Sekunden -> ~312ms zwischen den Impulsen
+  if ((millis() - ContactTime) > 100 ) {  
     ContactTime = millis();
 
     if (gf_no_int) {
